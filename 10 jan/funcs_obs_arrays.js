@@ -7,7 +7,7 @@
  * Part 2: Write a function that takes an array of numbers and returns their sum
  * 
  * Part 3: (Bonus) Modify the range function to take an optional third parameter (step) which defines how the
- * values in the array are incremented.
+ * values in the array are incremented. Make sure it works for both positive and negative steps.
  * 
  */
 
@@ -38,9 +38,29 @@
 const stepRange = (start, end, step = 1) => {
     let range = [];
 
-    for (let i = start; i <= end; i+= step) {
-        range.push(i);
+    if (step >= 0){
+        for (let i = start; i <= end; i+= step) {
+            range.push(i);
+        }
+    }
+    else {
+        for (let i = start; i >= end; i+= step) {
+            range.push(i);
+        }
     }
 
     return range;
 }
+
+/*
+ * Sum of a range!!!
+ * 
+ * Part 1: Write a function that takes two parameters, start and end, and returns an array that contains every number
+ * between and including the start and end parameters. 
+ * 
+ * Part 2: Write a function that takes an array of numbers and returns their sum
+ * 
+ * Part 3: (Bonus) Modify the range function to take an optional third parameter (step) which defines how the
+ * values in the array are incremented. Make sure it works for both positive and negative steps.
+ * 
+ */
