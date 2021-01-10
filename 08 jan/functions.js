@@ -12,3 +12,4 @@ const minCheck = function (a, b) {
         return b;
     }
 }
+
